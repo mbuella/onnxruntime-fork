@@ -1,9 +1,9 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#include "common.h"
 #include "onnxruntime_cxx_api.h"
 
-#include "common.h"
 #include "inference_session_wrap.h"
 #include "ort_instance_data.h"
 #include "ort_singleton_data.h"
@@ -13,9 +13,6 @@
 #include <string>
 
 Napi::Object InferenceSessionWrap::Init(Napi::Env env, Napi::Object exports) {
-  // create ONNX runtime env
-  Ort::InitApi();
-
   // initialize binding
   Napi::HandleScope scope(env);
 
