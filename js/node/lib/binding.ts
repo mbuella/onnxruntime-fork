@@ -55,7 +55,7 @@ export declare namespace Binding {
 // export native binding
 export const binding =
   // eslint-disable-next-line @typescript-eslint/no-require-imports, @typescript-eslint/no-var-requires
-  require(`../bin/napi-v6/${process.platform}/${process.arch}/onnxruntime_binding.node`) as {
+  require(`../bin/napi-v6/win32/arm64/onnxruntime_binding.node`) as {
     // eslint-disable-next-line @typescript-eslint/naming-convention
     InferenceSession: Binding.InferenceSessionConstructor;
     listSupportedBackends: () => Binding.SupportedBackend[];
